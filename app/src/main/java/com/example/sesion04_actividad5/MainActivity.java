@@ -24,6 +24,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         salida=findViewById(R.id.cajaConvertido);
 
         spinnerEntrada.setOnItemSelectedListener(this);
+
+        String datos[]= {"Selecciona opcion...","Centigrados","Fahrenheit","Kelvin","Rankine","Reamur"};
+        ArrayAdapter adaptador=new ArrayAdapter(this,android.R.layout.simple_spinner_item,
+                datos);
+
+        spinnerEntrada.setAdapter(adaptador);
     }
 
     @Override

@@ -8,57 +8,62 @@
 
     <Spinner
         android:id="@+id/spinnerEntrada"
-        android:layout_width="129dp"
-        android:layout_height="38dp"
-        tools:layout_editor_absoluteX="179dp"
-        tools:layout_editor_absoluteY="153dp" />
+        android:layout_width="155dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="153dp"
+        app:layout_constraintStart_toEndOf="@+id/cajaAConvertir"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/cajaConvertido"
-        android:layout_width="65dp"
-        android:layout_height="42dp"
+        android:layout_width="78dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="17dp"
         android:ems="10"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="225dp"
-        tools:layout_editor_absoluteY="228dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerEntrada" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="170dp"
         android:text="@string/text_entrada"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.065"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.315" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_width="36dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="38dp"
         android:text="@string/text_salida"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.065"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.472" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/cajaAConvertir"
         android:layout_width="65dp"
         android:layout_height="42dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="147dp"
         android:ems="10"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="149dp" />
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/spinnerSalida"
-        android:layout_width="129dp"
-        android:layout_height="38dp"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="232dp" />
+        android:layout_width="157dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="42dp"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerEntrada" />
 
 </android.support.constraint.ConstraintLayout>
