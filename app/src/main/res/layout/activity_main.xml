@@ -22,9 +22,10 @@
         android:layout_marginTop="38dp"
         android:layout_marginEnd="17dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerEntrada" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerEntrada"
+        />
 
     <TextView
         android:id="@+id/textView"
@@ -53,7 +54,7 @@
         android:layout_marginStart="9dp"
         android:layout_marginTop="147dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent" />
 
