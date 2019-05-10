@@ -10,8 +10,8 @@
         android:id="@+id/spinnerEntrada"
         android:layout_width="155dp"
         android:layout_height="36dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="153dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="152dp"
         app:layout_constraintStart_toEndOf="@+id/cajaAConvertir"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -19,12 +19,16 @@
         android:id="@+id/cajaConvertido"
         android:layout_width="78dp"
         android:layout_height="38dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="58dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="248dp"
         android:ems="10"
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spinnerSalida"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerEntrada" />
 
     <TextView
         android:id="@+id/textView"
@@ -40,11 +44,15 @@
         android:id="@+id/textView2"
         android:layout_width="36dp"
         android:layout_height="38dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="58dp"
         android:layout_marginEnd="11dp"
         android:layout_marginBottom="248dp"
         android:text="@string/text_salida"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/spinnerSalida" />
+        app:layout_constraintEnd_toStartOf="@+id/spinnerSalida"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/cajaAConvertir"
@@ -61,9 +69,13 @@
         android:id="@+id/spinnerSalida"
         android:layout_width="157dp"
         android:layout_height="36dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="248dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/cajaConvertido" />
+        app:layout_constraintEnd_toStartOf="@+id/cajaConvertido"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerEntrada" />
 
 </android.support.constraint.ConstraintLayout>
