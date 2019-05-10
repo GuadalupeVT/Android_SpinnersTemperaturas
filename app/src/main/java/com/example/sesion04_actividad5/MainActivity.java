@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         salida=findViewById(R.id.cajaConvertido);
 
         spinnerEntrada.setOnItemSelectedListener(this);
+        spinnerSalida.setOnItemSelectedListener(this);
 
         String datos[]= {"Selecciona opcion...","Centigrados","Fahrenheit","Kelvin","Rankine","Reamur"};
         ArrayAdapter adaptador=new ArrayAdapter(this,android.R.layout.simple_spinner_item,
@@ -69,37 +70,55 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        String vectorC[]= {"Selecciona opcion...","Fahrenheit","Kelvin"};
-        String vectorF[]= {"Selecciona opcion...","Centigrados","Kelvin","Rankine","Reamur"};
-        String vectorK[]= {"Selecciona opcion...","Fahrenheit","Centigrados"};
-        String vectorR[]= {"Selecciona opcion...","Fahrenheit"};
-        String vectorRe[]= {"Selecciona opcion...","Fahrenheit"};
+        String vectorC[] = {"Selecciona opcion...", "Fahrenheit", "Kelvin"};
+        String vectorF[] = {"Selecciona opcion...", "Centigrados", "Kelvin", "Rankine", "Reamur"};
+        String vectorK[] = {"Selecciona opcion...", "Fahrenheit", "Centigrados"};
+        String vectorR[] = {"Selecciona opcion...", "Fahrenheit"};
+        String vectorRe[] = {"Selecciona opcion...", "Fahrenheit"};
 
-        ArrayAdapter adapter=null;
-        if (position==1) {
-            adapter= new ArrayAdapter(this, android.R.layout.simple_spinner_item,
-                    vectorC);
+        ArrayAdapter adapter = null;
+        if(parent.getId()==R.id.spinnerEntrada) {
+            if (position == 1) {
+                adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item,
+                        vectorC);
+            }
+            if (position == 2) {
+                adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item,
+                        vectorF);
+            }
+            if (position == 3) {
+                adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item,
+                        vectorK);
+            }
+            if (position == 4) {
+                adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item,
+                        vectorR);
+            }
+            if (position == 5) {
+                adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item,
+                        vectorRe);
+            }
+            spinnerSalida.setAdapter(adapter);
         }
-        if (position==2) {
-            adapter= new ArrayAdapter(this, android.R.layout.simple_spinner_item,
-                    vectorF);
+        if(parent.getId()==R.id.spinnerSalida) {
+            double dato=Double.parseDouble(entrada.getText().toString());
+
+
+            if(spinnerEntrada.getSelectedItem().toString().equals("Centigrados")&&spinnerSalida.getSelectedItem().equals("Fahrenheit")) {
+                double resul=new ConversorTemperaturas().centigradosAFahrenheit(dato);
+                salida.setText(resul+"");
+            }
+
         }
-        if (position==3) {
-            adapter= new ArrayAdapter(this, android.R.layout.simple_spinner_item,
-                    vectorK);
-        }
-        if (position==4) {
-            adapter= new ArrayAdapter(this, android.R.layout.simple_spinner_item,
-                    vectorR);
-        }
-        if (position==5) {
-            adapter= new ArrayAdapter(this, android.R.layout.simple_spinner_item,
-                    vectorRe);
-        }
-        spinnerSalida.setAdapter(adapter);
+
+
+
+
+
     }
     @Override
     public void onNothingSelected(AdapterView<?> parent){
 
     }
+
 }
