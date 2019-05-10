@@ -108,6 +108,44 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 double resul=new ConversorTemperaturas().centigradosAFahrenheit(dato);
                 salida.setText(resul+"");
             }
+            if(spinnerEntrada.getSelectedItem().toString().equals("Fahrenheit")&&spinnerSalida.getSelectedItem().equals("Centigrados")) {
+                double resul=new ConversorTemperaturas().fahrenheitACentigrados(dato);
+                salida.setText(resul+"");
+            }
+
+            if(spinnerEntrada.getSelectedItem().toString().equals("Fahrenheit")&&spinnerSalida.getSelectedItem().toString().equals("Kelvin")) {
+                double resul=new ConversorTemperaturas().fahrenheitAKelvin(dato);
+                salida.setText(resul+"");
+            }
+            if(spinnerEntrada.getSelectedItem().toString().equals("Kelvin")&&spinnerSalida.getSelectedItem().toString().equals("Fahrenheit")) {
+                double resul=new ConversorTemperaturas().kelvinAFahrenheit(dato);
+                salida.setText(resul+"");
+            }
+            if(spinnerEntrada.getSelectedItem().toString().equals("Fahrenheit")&&spinnerSalida.getSelectedItem().toString().equals("Rankine")) {
+                double resul=new ConversorTemperaturas().fahrenheitARankine(dato);
+                salida.setText(resul+"");
+            }
+            if(spinnerEntrada.getSelectedItem().toString().equals("Rankine")&&spinnerSalida.getSelectedItem().toString().equals("Fahrenheit")) {
+                double resul=new ConversorTemperaturas().rankineAFahrenheit(dato);
+                salida.setText(resul+"");
+            }
+            if(spinnerEntrada.getSelectedItem().toString().equals("Fahrenheit")&&spinnerSalida.getSelectedItem().toString().equals("Reamur")) {
+                double resul=new ConversorTemperaturas().fahrenheitAReamur(dato);
+                salida.setText(resul+"");
+            }
+            if(spinnerEntrada.getSelectedItem().toString().equals("Reamur")&&spinnerSalida.getSelectedItem().toString().equals("Fahrenheit")) {
+                double resul=new ConversorTemperaturas().reamurAfahrenheit(dato);
+                salida.setText(resul+"");
+            }
+            if(spinnerEntrada.getSelectedItem().toString().equals("Centigrados")&&spinnerSalida.getSelectedItem().toString().equals("Kelvin")) {
+                double resul=new ConversorTemperaturas().centigradosAKelvin(dato);
+                salida.setText(resul+"");
+            }
+            if(spinnerEntrada.getSelectedItem().toString().equals("Kelvin")&&spinnerSalida.getSelectedItem().toString().equals("Centigrados")) {
+                double resul=new ConversorTemperaturas().kelvinACentigrados(dato);
+                salida.setText(resul+"");
+            }
+
 
         }
 
